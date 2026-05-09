@@ -40,37 +40,22 @@ https://kk-72.netlify.app/
 
 ```mermaid
 graph TD
-    A([User]) -->|Visits Website| B[App Layout]
-    
-    subgraph Global Context
-        C{NavbarContext}
-    end
-    
-    subgraph Navigation
-        D[Navbar]
-        E[FullscreenNav]
-    end
-    
-    B --> D
-    B --> E
-    D -.->|Toggles Menu| C
-    C -.->|State Change| E
-    
-    subgraph Pages
-        F[Home Page]
-        G[Agency Page]
-        H[Project Page]
-    end
-    
-    B -->|Router Switch| F
-    B -->|Router Switch| G
-    B -->|Router Switch| H
-    
-    subgraph Home Components
-        F --> I[Videos Background]
-        F --> J[HomeHeroText]
-        F --> K[HomeBottomText]
-    end
+
+    A[User] -->|Visits Website| B[App Layout]
+
+    B --> D[Navbar]
+    B --> E[FullscreenNav]
+
+    D -->|Toggles Menu| C[NavbarContext]
+    C -->|State Change| E
+
+    B -->|Router Switch| F[Home Page]
+    B -->|Router Switch| G[Agency Page]
+    B -->|Router Switch| H[Project Page]
+
+    F --> I[Videos Background]
+    F --> J[HomeHeroText]
+    F --> K[HomeBottomText]
 ```
 
 ---
