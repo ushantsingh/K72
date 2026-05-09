@@ -68,23 +68,23 @@ sequenceDiagram
     participant Context as NavbarContext
     participant Nav as FullscreenNav
     participant GSAP as GSAP Timeline
-    
+
     User->>Context: Clicks Hamburger Menu
     Context->>Nav: State Update: navOpen = true
     Nav->>GSAP: Trigger gsapAnimation()
-    
+
     Note over GSAP,Nav: Timeline Animation sequence begins
-    
+
     GSAP->>Nav: 1. Display: Block
     GSAP->>Nav: 2. Staggered Stair Expand (height: 100%)
     GSAP->>Nav: 3. Links Fade In & RotateX (0deg)
-    
+
     User->>Context: Clicks Close Icon
     Context->>Nav: State Update: navOpen = false
     Nav->>GSAP: Trigger gsapAnimationReverse()
-    
+
     Note over GSAP,Nav: Timeline Reverse sequence begins
-    
+
     GSAP->>Nav: 1. Links Fade Out & RotateX (90deg)
     GSAP->>Nav: 2. Staggered Stair Collapse (height: 0)
     GSAP->>Nav: 3. Display: None
@@ -146,6 +146,8 @@ k72/
 4. GSAP timeline starts
 5. Staggered stairs expand
 6. Navigation links rotate and fade in
+
+---
 
 ## Menu Closing Animation
 
