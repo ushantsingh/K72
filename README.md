@@ -96,42 +96,45 @@ sequenceDiagram
 
 ```bash
 k72/
-│
+├── fonts/
+│   ├── Lausanne-300.woff2
+│   └── Lausanne-500.woff2
 ├── public/
-│   ├── videos/
-│   ├── images/
-│   └── favicon.ico
-│
+│   ├── favicon.svg
+│   ├── front_video.mp4
+│   └── icons.svg
 ├── src/
 │   ├── assets/
-│   │
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   └── vite.svg
 │   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── FullscreenNav.jsx
-│   │   ├── HomeHeroText.jsx
-│   │   ├── HomeBottomText.jsx
-│   │   ├── VideoBackground.jsx
-│   │   └── AnimatedLink.jsx
-│   │
+│   │   ├── home/
+│   │   │   ├── common/
+│   │   │   │   └── Stair.jsx
+│   │   │   ├── HomeBottomText.jsx
+│   │   │   ├── HomeHeroText.jsx
+│   │   │   └── Videos.jsx
+│   │   ├── navigation/
+│   │   │   ├── FullscreenNav.jsx
+│   │   │   └── Navbar.jsx
+│   │   └── projects/
+│   │       └── ProjectCard.jsx
 │   ├── context/
-│   │   └── NavbarContext.jsx
-│   │
+│   │   └── NavContext.jsx
 │   ├── pages/
+│   │   ├── Agence.jsx
 │   │   ├── Home.jsx
-│   │   ├── Agency.jsx
 │   │   └── Project.jsx
-│   │
-│   ├── routes/
-│   │   └── AppRoutes.jsx
-│   │
 │   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
+│   ├── index.css
+│   └── main.jsx
+├── eslint.config.js
+├── index.html
 ├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── README.md
+├── README.md
+└── vite.config.js
+
 ```
 
 ---
