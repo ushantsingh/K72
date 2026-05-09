@@ -94,7 +94,7 @@ sequenceDiagram
 
 # 📁 Project Structure
 
-```bash
+```text
 k72/
 ├── fonts/
 │   ├── Lausanne-300.woff2
